@@ -1,0 +1,16 @@
+[Default Applications]
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
+inode/directory=yazi.desktop
+application/vnd.microsoft.portable-executable=wine.desktop
+
+[Added Associations]
+image/png=chromium.desktop;feh.desktop;
+audio/x-vorbis+ogg=mpv.desktop;vlc.desktop;
+application/pdf=firefox.desktop;
+inode/directory=yazi.desktop;
+application/json=code.desktop;
+application/vnd.microsoft.portable-executable=wine.desktop;
