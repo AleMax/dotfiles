@@ -1,0 +1,9 @@
+# Config file for Alacritty
+
+import = ["~/.config/alacritty/themes/themes/breeze.toml"]
+
+[window]
+opacity = 0.8
+
+[scrolling]
+multiplier = 10
