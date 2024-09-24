@@ -1,0 +1,6 @@
+! option = symbols
+  custom:extend = +custom(extend)
+  custom:specialsym = +custom(specialsym)  
+
+// Include the system 'evdev' file
+! include %S/evdev

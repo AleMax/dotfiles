@@ -17,6 +17,7 @@
         "memory",
         "temperature",
         "battery",
+        "sway/language",
         "clock"
     ],
     "sway/mode": {
@@ -112,6 +113,10 @@
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
+    },
+    "sway/language": {
+        "format": "{}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next",
     },
     "clock": {
         "interval": 60,

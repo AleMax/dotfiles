@@ -1,0 +1,79 @@
+// Custom Extend Layer for Colemak DH Wide
+// Caps activated, arrow keys on homerow, backspace, and escape
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "extend" {
+    key.type[group1]="EIGHT_LEVEL_SEMIALPHABETIC";
+    
+    // Q Q -> Esc
+    key <AD01> {symbols[Group1] = [Any, Any, Any, Any, Escape, Escape],
+                 actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+                    Redirect(key=<ESC>,clearmods=LevelFive), Redirect(key=<ESC>,clearmods=LevelFive)],
+                 repeat=yes};
+
+    // Ü ; -> Delete
+    key <AD11> {symbols[Group1] = [Any, Any, Any, Any, Delete, Delete],       
+                 actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+                    Redirect(key=<DELE>,clearmods=LevelFive), Redirect(key=<DELE>,clearmods=LevelFive)],
+                 repeat=yes}; 
+
+    // D S -> Shift
+    key <AC03> {symbols[Group1] = [Any, Any, Any, Any, Shift_L, Shift_L],       
+                 actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+                    SetMods(mods=Shift), SetMods(mods=Shift)],
+                 repeat=yes}; 
+
+    // F T -> Control
+    key <AC04> {symbols[Group1] = [Any, Any, Any, Any, Control_L, Control_L],
+                 actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+                    SetMods(mods=Control), SetMods(mods=Shift+Control)],
+                 repeat=yes}; 
+    
+    // J M -> Left  
+    key <AC07> {symbols[Group1] = [Any, Any, Any, Any, Left, Left],
+                 actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+                    Redirect(key=<LEFT>,clearmods=LevelFive), Redirect(key=<LEFT>,clearmods=LevelFive)],
+                 repeat=yes}; 
+
+
+    // K N -> Down
+    key <AC08> {symbols[Group1] = [Any, Any, Any, Any, Down, Down],
+                 actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+                    Redirect(key=<DOWN>,clearmods=LevelFive), Redirect(key=<DOWN>,clearmods=LevelFive)],
+                 repeat=yes}; 
+    
+    // L E -> Up    
+    key <AC09> {symbols[Group1] = [Any, Any, Any, Any, Up, Up],
+                 actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+                    Redirect(key=<UP>,clearmods=LevelFive), Redirect(key=<UP>,clearmods=LevelFive)],
+                 repeat=yes}; 
+
+    // Ö I -> Right    
+    key <AC10> {symbols[Group1] = [Any, Any, Any, Any, Right, Right],
+                 actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+                    Redirect(key=<RGHT>,clearmods=LevelFive), Redirect(key=<RGHT>,clearmods=LevelFive)],
+                 repeat=yes}; 
+    
+    // Ä O -> Backspace    
+    key <AC11> {symbols[Group1] = [Any, Any, Any, Any, BackSpace, BackSpace],
+                 actions[Group1] = [NoAction(), NoAction(), NoAction(), NoAction(),
+                    Redirect(key=<BKSP>,clearmods=LevelFive), Redirect(key=<BKSP>,clearmods=LevelFive)],
+                 repeat=yes}; 
+
+};
+
+// Colemak DH Wide AltGr Modifications for ÄÖÜ € etc
+
+partial alphanumeric_keys modifier_keys
+xkb_symbols "specialsym" {
+    key.type[group1]="EIGHT_LEVEL_SEMIALPHABETIC";
+    
+        key <AC01>	{[Any, Any, adiaeresis, Adiaeresis, Any, Any]};
+        key <AC11>      {[Any, Any, odiaeresis, Odiaeresis, Any, Any]};
+        key <AD09>      {[Any, Any, udiaeresis, Udiaeresis, Any, Any]};
+        
+        key <AC09>      {[Any, Any, EuroSign, Any, Any, Any]};
+        key <AD10>      {[Any, Any, yen, Any, Any, Any]};
+
+
+};
