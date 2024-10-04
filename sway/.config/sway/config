@@ -340,6 +340,10 @@ layer_effects "waybar" blur enable; shadows enable
 
 default_dim_inactive 0.1
 
+#
+# Autotiling
+#
+exec_always --no-startup-id autotiling
 
 #
 # Polkit
