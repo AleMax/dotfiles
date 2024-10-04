@@ -37,7 +37,7 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 output eDP-1 mode 2256x1504@59.999Hz pos 0 0 scale 1.5
 output eDP-1 bg /home/alemax/Pictures/Wallpaper/wallhaven-g76mml_3x2.png fill
 
-output 'LG Electronics LG ULTRAGEAR 109MAXS37U34' mode 2560x1440@119.998Hz pos 1504 0
+output 'LG Electronics LG ULTRAGEAR 109MAXS37U34' mode 2560x1440@99.946Hz pos 1504 0
 output 'LG Electronics LG ULTRAGEAR 312NTMXE3467' mode 2560x1440@119.998Hz pos 4064 0
 
 
